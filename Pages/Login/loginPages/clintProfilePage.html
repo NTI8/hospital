@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة المريض</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/Css/LoginPage.css">
+</head>
+
+<body class="row m-0 p-0">
+    <aside class="col-2 vh-100 text-center position-relative clintPageLogin">
+        <div class="img w-100 m-auto d-flex justify-content-center my-3 position-relative"><img
+                src="/Images/Login/pitaint.png" width="100" height="100px" class=" m-auto"></div>
+        <h3 class=" fs-5" id="useProfileName">المريض: <span id="dynamicUserName">غير معروف</span></h3>
+        <h4 class=" fs-6">ملف طبي</h4>
+        <hr>
+        <div class="d-grid gap-3 mt-4"><a href="#" class="btn btn-primary text-white fw-bold btnSwithcMain"
+                data-btn="show-dates">عرض مواعيدي</a><a href="#records"
+                class="btn btn-primary text-white fw-bold btnSwithcMain" data-btn="records-History">سجل الفحوصات</a><a
+                href="#" class="btn btn-primary text-white fw-bold btnSwithcMain"
+                data-btn="update-info" ">تحديث البيانات</a></div><div class=" d-grid gap-2 mt-4 logout
+                position-absolute"><a href="#" class="btn btn-secondary text-white fw-bold LogoutProfile"
+                    id="LogoutProfile" )>تسجيل الخروج</a><a href="#" class="btn btn-danger text-white fw-bold"
+                    id="DelteUserProfile">حذف الحساب</a></div>
+    </aside>
+    <main class="col-10 min-vh-100">
+        <div id="show-dates" class="content-section active">
+            <h2>عرض مواعيدي</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>رقم الموعد</th>
+                            <th>التاريخ</th>
+                            <th>الوقت</th>
+                            <th>اسم الطبيب</th>
+                            <th>التخصص</th>
+                            <th>الحالة</th>
+                            <th>إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointmentsTable">
+                        <tr>
+                            <td colspan="7">لا توجد بيانات.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="records-History" class="content-section">
+            <h2>سجل الفحوصات</h2>
+            <p>هنا يمكنك متابعة سجل الفحوصات.</p>
+        </div>
+        <div id="update-info" class="content-section">
+            <h2>تحديث البيانات</h2>
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">تحديث البيانات الشخصية</h2>
+                <form class="p-4 border rounded shadow-sm" id="updateProfileForm">
+                    <div class="mb-3"><label for="editUsernameProfile" class="form-label">اسم المستخدم</label><input
+                            type="text" class="form-control" id="editUsernameProfile"
+                            onkeyup="ValidationName(this.value , this.id)" placeholder="أدخل اسم المستخدم"></div>
+                    <div class="mb-3"><label for="editEmailProfile" class="form-label">البريد الإلكتروني</label><input
+                            type="email" class="form-control" id="editEmailProfile"
+                            onkeyup="ValidationEmail(this.value , this.id)" placeholder="أدخل البريد الإلكتروني"></div>
+                    <div class="mb-3"><label for="editPasswordProfile" class="form-label">تأكيد كلمة
+                            المرور</label><input type="password" class="form-control" id="editPasswordProfile"
+                            onkeyup="ValidationPassword(this.value , this.id)" placeholder="أدخل كلمة المرور الجديدة">
+                    </div>
+                    <div class="d-grid"><button type="submit" class="btn btn-primary" id="btnEditPrfole"
+                            onclick="updateUser()">حفظ التغييرات</button></div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="/Bootstrap/jquery.min.js"></script>
+    <script src="/Bootstrap/popper.min.js"></script>
+    <script src="/Bootstrap/bootstrap.min.js"></script>
+    <script src="/Script/LoginPage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الدكتور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/Css/LoginPage.css">
+
+<body class="row m-0 p-0">
+    <aside class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2 text-center doctorPageLogin">
+        <div class="img w-100 m-auto d-flex justify-content-center my-3 position-relative"><img
+                src="/Images/Login/doctor.png" alt="" width="100" height="100px" class=" m-auto "></div>
+        <h3 class=" fs-5" id="DoctorProfileNameDisplay"></h3>
+        <h4 class=" fs-6">باطنة</h4>
+        <h4 class=" fs-6">ماجستير جامعه عين شمس</h4>
+        <hr>
+        <div class="d-grid gap-3 mt-4"><a href="#" class="btn btn-primary text-white fw-bold btnSwithcMain"
+                data-btn="show-dates">عرض المواعيد</a><a href="#-records"
+                class="btn btn-primary text-white fw-bold btnSwithcMain" data-btn="clits-record">سجلات المرضى</a><a
+                href="#" class="btn btn-primary text-white fw-bold btnSwithcMain" data-btn="update-info">تحديث البيانات
+                الشخصية</a></div>
+        <div class="d-grid gap-2 mt-4 logout position-absolute "><a href="#"
+                class="btn btn-secondary text-white fw-bold LogoutProfile">تسجيل الخروج</a><a href="#"
+                class="btn btn-danger text-white fw-bold " id="DelteUserProfileD">حذف الحساب</a></div>
+    </aside>
+    <main class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10 min-vh-100">
+        <div id="show-dates" class="content-section active">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">جدول مواعيد الطبيب - باطنة</h2>
+                <div class="mb-4">
+                    <h4>إضافة موعد جديد</h4>
+                    <form id="addAppointmentForm" class="row g-3">
+                        <div class="col-md-4"><input type="text" class="form-control" id="newPatientName"
+                                placeholder="اسم المريض" required></div>
+                        <div class="col-md-3"><input type="date" class="form-control" id="newAppointmentDate" required>
+                        </div>
+                        <div class="col-md-3"><input type="time" class="form-control" id="newAppointmentTime" required>
+                        </div>
+                        <div class="col-md-2"><select class="form-select" id="newAppointmentStatus" required>
+                                <option value="">اختر الحالة</option>
+                                <option value="مؤكد">مؤكد</option>
+                                <option value="ملغي">ملغي</option>
+                                <option value="معلق">معلق</option>
+                            </select></div>
+                        <div class="col-md-12 text-end"><button type="submit" class="btn btn-primary">إضافة
+                                الموعد</button></div>
+                    </form>
+                </div>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>اسم المريض</th>
+                            <th>تاريخ الموعد</th>
+                            <th>وقت الموعد</th>
+                            <th>الحالة</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointmentsTable"></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="clits-record" class="content-section">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">سجل المرضى</h2>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>اسم المريض</th>
+                            <th>العمر</th>
+                            <th>الحالة</th>
+                            <th>تاريخ الدخول</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patientRecords"></tbody>
+                </table>
+            </div>
+            <script>const patients = [{ id: 1, name: "أحمد علي", age: 34, status: "مستقر", admissionDate: "2024-12-01" }, { id: 2, name: "سارة محمد", age: 29, status: "حرج", admissionDate: "2024-12-10" }, { id: 3, name: "خالد يوسف", age: 45, status: "متقدم", admissionDate: "2024-11-20" },]; // مرجع إلى tbody const patientRecords=document.getElementById("patientRecords"); // صفوف الجدول ديناميكيًا patients.forEach(patient=>{ const row=document.createElement("tr"); row.innerHTML=` <td>${patient.id}</td><td>${patient.name}</td><td>${patient.age}</td><td>${patient.status}</td><td>${patient.admissionDate}</td>`; patientRecords.appendChild(row);}); </script>
+        </div>
+        <div id="update-info" class="content-section">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">تحديث البيانات الشخصية</h2>
+                <form class="p-4 border rounded shadow-sm">
+                    <div class="mb-3"><label for="username" class="form-label">اسم المستخدم</label><input type="text"
+                            class="form-control" id="editUsernameProfileD"></div>
+                    <div class="mb-3"><label for="email" class="form-label">البريد الإلكتروني</label><input type="email"
+                            class="form-control" id="editEmailProfileD"></div>
+                    <div class="mb-3"><label for="password" class="form-label">كلمة المرور</label><input type="password"
+                            class="form-control" id="editPasswordProfileD"></div>
+                    <div class="d-grid"><button type="submit" class="btn btn-primary" id="btnEditPrfoleD">حفظ
+                            التغييرات</button></div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="/Bootstrap/jquery.min.js"></script>
+    <script src="/Bootstrap/popper.min.js"></script>
+    <script src="/Bootstrap/bootstrap.min.js"></script>
+    <script src="/Script/LoginPage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-img-top {
+            height: 69%; /* تحديد ارتفاع موحد للصور */
+            object-fit: cover; /* ضمان تناسب الصور */
+            width: 100%; /* عرض الصور ليغطي الكارد */
+        }
+
+        .card-body {
+            flex-grow: 1; /* ملء المساحة المتبقية */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* توزيع المحتوى بالتساوي */
+        }
+    </style>
+    <link rel="stylesheet" href="/Css/card.css">
+</head>
+<body>
+    <nav class="navbar position-fixed navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/Pages/index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Pages/pages-depart/Departments.html">الأقسام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active btn btn-light" href="/Pages/Docters/Cards.html">الأطباء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-disabled="true"
+                            href="/Pages/pages-depart/book_page_mah.html">الحجز</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="">أحدث العروض</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Pages/Login/LoginPage.html">تسجيل دخول</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">عن المستشفى</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Pages/">اتصل بنا</a></li>
+                            <li><a class="dropdown-item" href="/Pages/aboutus/about.html">لمحة عامة</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Doctors Directory</h1>
+        <div class="mb-3">
+            <input id="search" type="text" class="form-control" placeholder="Search for a doctor by name">
+        </div>
+        <div class="mb-3">
+            <select id="filter" class="form-select">
+                <option value="">كل التخصوصات</option>
+                <option value="نساءوتوليد"> نساءوتوليد</option>
+                <option value="اطفال وحديثي ولاده ">اطفال وحديثي ولاده</option>
+                <option value="باطني وسكري">باطني وسكري</option>
+                <option value="انف واذن">انف واذن</option>
+                <option value="جراح قلب">جراح قلب</option>
+                <option value="جرراحه تجميليه ">جراحه تجميليه </option>
+                <option value="اسنان">اسنان</option>
+            </select>
+        </div>
+
+        <div class="row" id="doctors">
+            <div class="col-md-4 mb-4" data-name="د.عبدالفتاح علي" data-specialization="نساءوتوليد">
+                <div class="card">
+                    <img src="/Images/Docters/DR Abdel Fatah.jpg" class="card-img-top" alt="د . عبدالفتاح علي">
+                    <div class="card-body">
+                        <h5 class="card-title">عبدالفتاح علي</h5>
+                        <p class="card-text">نساء وتوليد</p>
+                        <p>استاذ دكتور في جامعه عين شمس واستشاري في الحقن المجهري</p>
+                        <a href="/Pages/Docters/Docter's Page/abdalftah.html" class="btn btn-primary">المزيد</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-name="د.حسني فؤاد" data-specialization="اطفال وحديثي الولاده">
+                <div class="card">
+                    <img src="/Images/Docters/DR Hosni.jpg" class="card-img-top" alt="Dr. Fedwa">
+                    <div class="card-body">
+                        <h5 class="card-title">د.حسني فواد</h5>
+                        <p class="card-text">اطفال حديثي الولاده.</p>
+                        <p>استاذ دكتور في جامعه المنيا  دكتوره من المانيا في امراض الجهازه التنفسي للاطفال</p>
+                        <a href="/Pages/Docters/Docter's Page/hosnefoaad.html" class="btn btn-primary">المزيد</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-name="مارتينا بباوي " data-specialization="جراحه قلب ">
+                <div class="card">
+                    <img src="/Images/Docters/DR Martena Bebawe.jpg" class="card-img-top" alt="Dr. Rasha">
+                    <div class="card-body">
+                        <h5 class="card-title">د.مارتينا بباوي </h5>
+                        <p class="card-text">جراحه قلب وقسطره</p>
+                        <p>ماجستر من هولندا في جراحه القلب والقسطره</p>
+                        <a href="/Pages/Docters/Docter's Page/martina.html" class="btn btn-primary">المزد</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row" id="doctors">
+           <div class="col-md-4 mb-4" data-name="د.عبدالفتاح علي" data-specialization="جراحه تجميليه ">
+               <div class="card">
+                   <img src="/Images/Docters/DR Abanob .jpg" class="card-img-top" 
+alt="Dr. Diaa">
+                   <div class="card-body">
+                       <h5 class="card-title">د.ابانوب عبدالمسيح</h5>
+                       <p class="card-text">جراحه تجميليه </p>
+                       <p>استاذ دكتورفي جامعه عين شمس وواستشاري جراحه تجميليه  وحروق   من الدرجه الاوله </p>
+                       <a href="/Pages/Docters/Docter's Page/abanob.html" class="btn btn-primary">المزيد</a>
+                   </div>
+               </div>
+           </div>
+            <div class="col-md-4 mb-4" data-name="د.مريم علي " data-specialization="اسنان">
+                <div class="card">
+                    <img src="/Images/Docters/DR Sara Gamal.jpg" class="card-img-top" 
+alt="Dr. Rasha">
+                    <div class="card-body">
+                        <h5 class="card-title">د.ساره جمال</h5>
+                        <p class="card-text">اسنان</p>
+                        <p>جراحه اسان حشو خلع تركيب  تقويم </p>
+                        <a href="/Pages/Docters/Docter's Page/sara.html" class="btn btn-primary">المزيد</a>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="col-md-4 mb-4" data-name="د.نرمين علي " data-specialization="اسنان">
+                <div class="card">
+                    <img src="/Images/Docters/DR Nermen Ali.jpg" class="card-img-top" 
+alt="Dr. Rasha">
+                    <div class="card-body">
+                        <h5 class="card-title">د.نرمين علي</h5>
+                        <p class="card-text">اسنان</p>
+                        <p>جراحه اسان حشو خلع تركيب  تقويم </p>
+                        <a href="/Pages/Docters/Docter's Page/nrmen.html" class="btn btn-primary">المزيد</a>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="col-md-4 mb-4" data-name="د.سامر خالد" data-specialization="اطفال ">
+                <div class="card">
+                    <img src="/Images/Docters/DR Samer Khaled.jpg" class="card-img-top" 
+alt="Dr. Rasha">
+                    <div class="card-body">
+                        <h5 class="card-title">د.سامر خالد</h5>
+                        <p class="card-text">اطفال</p>
+                        <p>دكتور متخصص في الأطفال</p>
+                        <a href="/Pages/Docters/Docter's Page/samar.html" class="btn btn-primary">المزيد</a>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="col-md-4 mb-4" data-name="د.ماجد منير" data-specialization="اطفال">
+                <div class="card">
+                    <img src="/Images/Docters/DR Nermen Ali.jpg" class="card-img-top" 
+alt="Dr. Rasha">
+                    <div class="card-body">
+                        <h5 class="card-title">د.مريم </h5>
+                        <p class="card-text">اسنان</p>
+                        <p>جراحه اسنان حشو خلع تركيب  تقويم </p>
+                        <a href="/Pages/Docters/Docter's Page/mariem.html" class="btn btn-primary">المزيد</a>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="col-md-4 mb-4" data-name="د.مريم علي " data-specialization="اسنان">
+                <div class="card">
+                    <img src="/Images/Docters/DR Hanaa Abd.jpg" class="card-img-top" 
+alt="Dr. Rasha">
+                    <div class="card-body">
+                        <h5 class="card-title">د.حنا عبد</h5>
+                        <p class="card-text">جراحه قلب</p>
+                        <p>جراحه قلب و قسطرة </p>
+                        <a href="/Pages/Docters/Docter's Page/hanaa.html" class="btn btn-primary">المزيد</a>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="col-md-4 mb-4" data-name="د.مريم علي " data-specialization="اسنان">
+                <div class="card">
+                    <img src="/Images/Docters/DR Majed Fayez.jpg" class="card-img-top" 
+alt="Dr. Rasha">
+                    <div class="card-body">
+                        <h5 class="card-title">د.ماجد فايز</h5>
+                        <p class="card-text">اسنان</p>
+                        <p>جراحه اسان حشو خلع تركيب  تقويم </p>
+                        <a href="/Pages/Docters/Docter's Page/majed.html" class="btn btn-primary">المزيد</a>
+                    </div>
+
+                </div>
+            </div>
+                        <div class="col-md-4 mb-4" data-name="د.علي" data-specialization="انف واذن">
+                <div class="card">
+                    <img src="/Images/Docters/DR Ali Hady.jpg" class="card-img-top" 
+alt="Dr. Rasha">
+                    <div class="card-body">
+                        <h5 class="card-title">.د.علي هادي</h5>
+                        <p class="card-text">انف واذن</p>
+                        <p>جراحه وتركيب انابيب </p>
+                        <a href="/Pages/Docters/Docter's Page/ali.html" class="btn btn-primary">المزيد</a>
+                    </div>
+
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+           
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>اتصل بنا</h3>
+                <p>العنوان:</p>
+                <p>الهاتف: 0123456789</p>
+                <p>البريد الإلكتروني: contact@hospital.com</p>
+            </div>
+            <div class="quick-links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="/Pages/pages-depart/Departments.html">الخدمات الطبية</a></li>
+                    <li><a href="/Pages/Docters/Cards.html">الفريق الطبي</a></li>
+                    <li><a href="/Pages/pages-depart/book_page_mah.html">الحجز المواعيد</a></li>
+                    <li><a href="/Pages/Contect/contectus.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="map-container">
+            <h3>موقعنا على الخريطة</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.999544843561!2d31.256211114758903!3d30.033207973971746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5cb45b3cfb06d%3A0x9999e4c106d6f0d2!2z2LnYp9mK2KzZitmB2LDYp9mE2LfYrtmK2Yog2KjYr9mE!5e0!3m2!1sar!2seg!4v1617352268069!5m2!1sar!2seg"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="footer-bottom">
+            <p>حقوق النشر © 2024 مستشفى الحياة. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Script/card.js"></script>
+</body>
+</html>

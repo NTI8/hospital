@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - مستشفى</title>
+<link rel="stylesheet" href="/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/Css/contect.css">
+</head>
+<body>
+    <nav class="navbar position-fixed navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/Pages/index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Pages/pages-depart/Departments.html">الأقسام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Pages/Docters/Cards.html">الأطباء</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-disabled="true"
+                            href="/Pages/pages-depart/book_page_mah.html">الحجز</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/Pages/Offers/OfferPage.html">أحدث العروض</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Pages/Login/LoginPage.html">تسجيل دخول</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">عن المستشفى</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active btn btn-light" href="/Pages/">اتصل بنا</a></li>
+                            <li><a class="dropdown-item" href="/Pages/aboutus/about.html">لمحة عامة</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>اتصل بنا</h1>
+    </header>
+    <main>
+        <section class="contact-form">
+            <h2>نموذج الاتصال</h2>
+            <form id="contactForm">
+                <label for="name">الاسم الكامل:</label>
+                <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+                
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
+                
+                <label for="phone">رقم الهاتف:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="أدخل رقم هاتفك">
+                
+                <label for="message">الرسالة:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="أدخل رسالتك"></textarea>
+                
+                <button type="submit">إرسال</button>
+            </form>
+            <div id="responseMessage"></div>
+        </section>
+        <div class="info-container"> 
+            <h3>معلومات التواصل</h3>
+            <div class="info-item">
+                <strong>العنوان:</strong>
+                <p> مستشفي الجياة - المنيا </p
+            </div>
+            <div class="info-item">
+                <strong>التليفون:</strong>
+                <p>01227590534</p>
+            </div>
+            <div class="info-item">
+                <strong>ساعات العمل:</strong>
+                <p>الاحد - الجمعه: 9:00 ص - 6:00 م</p>
+            </div>
+            <div id="responseMessage"></div>
+
+            <div class="map">
+                <h4>الموقع</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.773966217892!2d30.73729792468365!3d28.12291777594684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b25c9ff4ca9db%3A0xb233ef3a6077958c!2z2KzZgNin2YXZgNi52YDYqSDYp9mE2YDZhdmA2YbZgNmK2YDZgNmA2Kc!5e0!3m2!1sar!2seg!4v1733400994228!5m2!1sar!2seg" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            </div>
+    </main>
+
+
+
+
+  <!-- <h2 class="title">contact Page</h2>
+    <div class="container">
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">الاسم</label>
+                <input type="text" id="الاسم" name="الاسم" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div> -->
+
+        <!-- <div class="info-container"> 
+            <h3>Contact Information</h3>
+            <div class="info-item">
+                <strong>Address:</strong>
+                <p> Elsama,City, ElMinya </p
+            </div>
+            <div class="info-item">
+                <strong>Phone:</strong>
+                <p>01227590534</p>
+            </div>
+            <div class="info-item">
+                <strong>Time Works:</strong>
+                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+            <div id="responseMessage"></div>
+
+            <div class="map">
+                <h4>Our Location</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.773966217892!2d30.73729792468365!3d28.12291777594684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b25c9ff4ca9db%3A0xb233ef3a6077958c!2z2KzZgNin2YXZgNi52YDYqSDYp9mE2YDZhdmA2YbZgNmK2YDZgNmA2Kc!5e0!3m2!1sar!2seg!4v1733400994228!5m2!1sar!2seg" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+        </div -->
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>اتصل بنا</h3>
+                <p>العنوان:</p>
+                <p>الهاتف: 0123456789</p>
+                <p>البريد الإلكتروني: contact@hospital.com</p>
+            </div>
+            <div class="quick-links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="/Pages/pages-depart/Departments.html">الخدمات الطبية</a></li>
+                    <li><a href="/Pages/Docters/Cards.html">الفريق الطبي</a></li>
+                    <li><a href="/Pages/pages-depart/book_page_mah.html">الحجز المواعيد</a></li>
+                    <li><a href="/Pages/Contect/contectus.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="map-container">
+            <h3>موقعنا على الخريطة</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.999544843561!2d31.256211114758903!3d30.033207973971746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5cb45b3cfb06d%3A0x9999e4c106d6f0d2!2z2LnYp9mK2KzZitmB2LDYp9mE2LfYrtmK2Yog2KjYr9mE!5e0!3m2!1sar!2seg!4v1617352268069!5m2!1sar!2seg"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="footer-bottom">
+            <p>حقوق النشر © 2024 مستشفى الحياة. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    <script src="/Bootstrap/jquery.min.js"></script>
+    <script src="/Bootstrap/popper.min.js"></script>
+    <script src="/Bootstrap/bootstrap.min.js"></script>
+     <script src="/Script/contect.js"></script>
+</body>
+</html> 

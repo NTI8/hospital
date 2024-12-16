@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الإدمن</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/Css/LoginPage.css">
+    <style>
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="row m-0 p-0">
+    <aside class="col-lg-2 col-md-12 col-sm-12 col-xxl-2 vh-100 text-center position-relative adminPageLogin ">
+        <div class="img w-100 m-auto d-flex justify-content-center my-3 position-relative"><img
+                src="/Images/Login/admin.png" alt="" width="100" height="100px" class=" m-auto"></div>
+        <h3 class=" fs-5">المشرف: محمد علي</h3>
+        <hr>
+        <div class="d-grid gap-3 mt-4"><button class="btn btn-primary text-white fw-bold btnSwithcMain"
+                data-btn="manage-doctors">إدارة الأطباء</button><button
+                class="btn btn-primary text-white fw-bold btnSwithcMain" data-btn="manage-patients">إدارة
+                المرضى</button></div>
+        <div class="d-grid gap-2 mt-4 logout position-absolute"><a href="#"
+                class="btn btn-secondary text-white fw-bold LogoutProfile">تسجيل الخروج</a><a href="#"
+                class="btn btn-danger text-white fw-bold">حذف الحساب</a></div>
+    </aside>
+    <main class=" col-lg-10 col-md-12 col-sm-12 col-xxl-10 min-vh-100">
+        <div id="manage-doctors" class="content-section active">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">إدارة الأطباء</h2>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>المعرف</th>
+                            <th>اسم الطبيب</th>
+                            <th>التخصص</th>
+                            <th>رقم الهاتف</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="doctorsTable"></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="manage-patients" class="content-section">
+            <div class="container mt-5">
+                <h2 class="text-center mb-4">إدارة المرضى</h2>
+                <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>المعرف</th>
+                            <th>اسم المريض</th>
+                            <th>العمر</th>
+                            <th>رقم الهاتف</th>
+                            <th>التشخيص</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="patientsTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="/Bootstrap/jquery.min.js"></script>
+    <script src="/Bootstrap/popper.min.js"></script>
+    <script src="/Bootstrap/bootstrap.min.js"></script>
+    <script src="/Script/LoginPage.js"></script>
+</body>
+
+</html>

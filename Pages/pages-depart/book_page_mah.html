@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حجز عياده</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+    }
+
+    #receipt {
+      display: none;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+  </style>
+  <link rel="stylesheet" href="/Css/dep-style-mah2.css">
+</head>
+
+<body class="bg-light">
+  <nav class="navbar position-fixed navbar-expand-lg">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/Pages/index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/pages-depart/Departments.html">الأقسام</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Pages/Docters/Cards.html">الأطباء</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active btn btn-light" aria-disabled="true"
+                        href="/Pages/pages-depart/book_page_mah.html">الحجز</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="/Pages/Offers/OfferPage.html">أحدث العروض</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Pages/Login/LoginPage.html">تسجيل دخول</a>
+              </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-expanded="false">عن المستشفى</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/Pages/Contect/contectus.html">اتصل بنا</a></li>
+                        <li><a class="dropdown-item" href="/Pages/aboutus/about.html">لمحة عامة</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">حجز عيادة</h1>
+    <form id="booking-form" class="card p-4 shadow-sm">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="patient-name" class="form-label">اسم المريض</label>
+          <input type="text" id="patient-name" class="form-control" placeholder="أدخل اسم المريض" required>
+        </div>
+        <div id="mass" class="col-md-6">
+          <label for="phone" class="form-label">رقم الهاتف</label>
+          <input type="text" id="phone" class="form-control" placeholder="أدخل رقم الهاتف" required>
+          <span id="phone-error" class="error-message text-danger"></span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">البريد الإلكتروني</label>
+        <input type="email" id="email" class="form-control" placeholder="example@example.com">
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="specialty" class="form-label">التخصص</label>
+          <select id="specialty" class="form-select" required>
+            <option value="" disabled selected>اختر التخصص</option>
+            <option value="Internal">الباطنة</option>
+            <option value="neurology">المخ والأعصاب</option>
+            <option value="obstetrics">طب النساء والتوليد</option>
+            <option value="orthopedic">جراحة العظام</option>
+            <option value="cardiology">أمراض القلب</option>
+            <option value="dentistry">طب الأسنان</option>
+            <option value="pediatrics">طب الأطفال</option>
+            <option value="urology">طب المسالك البولية</option>
+            <option value="ophthalmology">طب العيون</option>
+            <option value="ENT">طب الأنف والأذن والحنجرة</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="doctor" class="form-label">الطبيب</label>
+          <select id="doctor" class="form-select" required>
+            <option value="" disabled selected>اختر الطبيب</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="date" class="form-label">التاريخ</label>
+          <input type="date" id="date" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label for="time" class="form-label">الوقت</label>
+          <select id="time" class="form-select" required>
+            <option value="" disabled selected>اختر الوقت</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">حجز الموعد</button>
+    </form>
+
+    <div id="receipt" class="mt-5" style="display: none;">
+      <h3 class="text-center">الإيصال</h3>
+      <p>اسم المريض: <span id="receipt-name"></span></p>
+      <p>رقم الهاتف: <span id="receipt-phone"></span></p>
+      <p>البريد الإلكتروني: <span id="receipt-email"></span></p>
+      <p>التخصص: <span id="receipt-specialty"></span></p>
+      <p>اسم الطبيب: <span id="receipt-doctor"></span></p>
+      <p>التاريخ: <span id="receipt-date"></span></p>
+      <p>الوقت: <span id="receipt-time"></span></p>
+      <div class="d-flex justify-content-between">
+        <button id="print-receipt" class="btn btn-success">طباعة الإيصال</button>
+        <button id="edit-appointment" class="btn btn-warning">تعديل البيانات</button>
+      </div>
+    </div>
+  </div>
+<footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>اتصل بنا</h3>
+                <p>العنوان:</p>
+                <p>الهاتف: 0123456789</p>
+                <p>البريد الإلكتروني: contact@hospital.com</p>
+            </div>
+            <div class="quick-links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="/Pages/pages-depart/Departments.html">الخدمات الطبية</a></li>
+                    <li><a href="/Pages/Docters/Cards.html">الفريق الطبي</a></li>
+                    <li><a href="/Pages/pages-depart/book_page_mah.html">الحجز المواعيد</a></li>
+                    <li><a href="/Pages/Contect/contectus.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="map-container">
+            <h3>موقعنا على الخريطة</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.999544843561!2d31.256211114758903!3d30.033207973971746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5cb45b3cfb06d%3A0x9999e4c106d6f0d2!2z2LnYp9mK2KzZitmB2LDYp9mE2LfYrtmK2Yog2KjYr9mE!5e0!3m2!1sar!2seg!4v1617352268069!5m2!1sar!2seg"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="footer-bottom">
+            <p>حقوق النشر © 2024 مستشفى الحياة. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+  <script src="/Bootstrap/jquery.min.js"></script>
+  <script src="/Bootstrap/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/Bootstrap/bootstrap.min.js"></script>
+
+  <script src="/Script/dep-script-mah.js"></script>
+</body>
+
+</html>

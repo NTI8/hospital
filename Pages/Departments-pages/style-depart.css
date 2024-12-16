@@ -1,0 +1,328 @@
+
+/* .department-page {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.department-image {
+    width: 50%;
+    max-height: 400px;
+    object-fit: cover;
+
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.department-page p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --landing-page-height: calc(100vh - 185px);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.Header-main-101 {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    position: static;
+    background-color: #fff;
+    width: 100%;
+    z-index: 999;
+}
+
+.Header-main-101.sticky {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+}
+
+.Header-main-101 .header-top {
+    display: flex;
+    justify-content: space-between;
+    direction: rtl;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    height: 94px;
+    border-bottom: 1px solid #ddd;
+}
+
+.Header-main-101 .hidden {
+    display: none;
+}
+
+.Header-main-101 .header-top div {
+    display: flex;
+    align-items: center;
+}
+
+.Header-main-101 .header-top ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Header-main-101 .search-input {
+    width: 60%;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, 185px);
+    display: none;
+}
+
+.show {
+    display: flex !important;
+}
+
+.Header-main-101.sticky .search-input {
+    transform: translate(-50%, 80px);
+}
+
+.Header-main-101 .search-input input {
+    border: none;
+    outline: 0;
+    padding: 10px;
+    width: 70%;
+    height: 50px;
+    font-size: 16px;
+    float: left;
+}
+
+.Header-main-101 .fa-magnifying-glass {
+    padding: 0 10px;
+}
+
+.Header-main-101 .search-input button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6.5px 15px;
+    width: 30%;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "cairo", sans-serif;
+}
+
+.Header-main-101 .search {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.Header-main-101 .search input[type=text] {
+    position: absolute;
+    padding: 10px;
+    width: 260px;
+    left: 0px;
+    top: 40px;
+}
+
+.Header-main-101 .search {
+    display: none;
+}
+
+.search-show {
+    display: block;
+}
+
+.Header-main-101 .header-top li {
+    margin: 0;
+    line-height: 1.5;
+}
+
+header.Header-main-101 .container {
+    position: relative;
+}
+
+.Header-main-101 nav {
+    direction: rtl;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    height: 60px;
+}
+
+.Header-main-101 nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.Header-main-101 nav ul li {
+    position: relative;
+}
+
+.Header-main-101 nav ul li::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #007bff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 32px;
+    width: 0%;
+    transition: width 800ms ease;
+}
+
+.Header-main-101 nav ul li:hover::after,
+.Header-main-101 nav ul li.active::after {
+    width: 80%;
+}
+
+.Header-main-101 nav ul li a {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.Header-main-101 nav ul li a:hover,
+.Header-main-101 nav ul li.active a {
+    color: #0056b3;
+}
+
+header.Header-main-101 .fa-magnifying-glass {
+    margin: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header.Header-main-101 .btn-reservation {
+    padding: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.Header-main-101 .fa-calendar {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.Header-main-101 nav div {
+    display: flex;
+    align-items: center;
+}
+
+.Header-main-101 nav i {
+    margin-right: 10px;
+    color: #888;
+}
+
+.Header-main-101 nav a {
+    text-decoration: none;
+}
+
+.Header-main-101 nav button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.Header-main-101 nav button:hover {
+    background-color: #0056b3;
+}
+
+.Header-main-101 .contact-info {
+    text-align: right;
+    font-size: 12px;
+}
+
+.Header-main-101 .contact-info p {
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.Header-main-101 .contact-info i,
+.Header-main-101 svg {
+    font-size: 40px;
+    color: #007bff;
+}
+
+header.Header-main-101 .logo {
+    font-size: 40px;
+}
+
+.Header-main-101 .logo img {
+    height: 40px;
+}
+
+.Header-main-101 .show-nav {
+    position: fixed;
+    top: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: 99;
+}
+
+.Header-main-101 .hide-Header-top {
+    display: none;
+    width: 100%;
+}
+
+.d-none {
+    display: none;
+}
+
+.Header-main-101 {
+    transition: top 0.3s ease-in-out;
+}
+
+.Header-main-101 .mobile-menu,
+.Header-main-101 .toggle-menu,
+.Header-main-101 .logo-mobile,
+.Header-main-101 .glass-icon {
+    display: none;
+    z-index: 999;
+}
+
+.glass-icon2 {
+    display: block !important;
+}
+
+.Header-main-101 .container,
+.Header-main-101 .show-nav {
+    max-width: 1170px;
+    margin: 0 auto;
+} */
+     
+ 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical History Form</title>
+    <link href="/Bootstrap/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/Css/patienthisform.css">
+
+</head>
+<body>
+    
+    <div class="w-75 m-auto py-5">
+        <div class="mb-4">
+            <label for="patientname" class="mb-3 fs-5 text-secondary">الاسم بالكامل (رباعى)</label>
+            <input type="text" required id="patientname" class="form-control w-50" value="">
+            
+        </div>
+        <div class="mb-4">
+            <label for="patientbirthdate" class="mb-3 fs-5 text-secondary">تاريخ الميلاد</label>
+            <input type="date" required id="patientbirthdate" class="form-control w-50">
+        </div>
+        <div class="mb-4">
+            <label for="patientphone" class="mb-3 fs-5 text-secondary">رقم الهاتف</label>
+            <input type="text" required id="patientphone" class="form-control w-50">
+        </div>
+        <div class="mb-4">
+            <label for="patientdisease" class="mb-3 fs-5 text-secondary">هل تعاني من أي أمراض مزمنة؟</label>
+            <textarea type="text" id="patientdisease" class="form-control w-50"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="patientmedicines" class="mb-3 fs-5 text-secondary">برجاء توضيح أسماء أي أدوية يتم تناولها وعدد الجرعات اليومية</label>
+            <textarea type="text" id="patientmedicines" class="form-control w-50"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="patientallergymed" class="mb-3 fs-5 text-secondary">هل تعاني من أي حساسية تجاه أدوية معينة؟</label>
+            <textarea type="text" id="patientallergymed" class="form-control w-50"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="patientallergyfood" class="mb-3 fs-5 text-secondary">هل تعاني من أي حساسية تجاه أطعمة معينة؟</label>
+            <textarea type="text" id="patientallergyfood" class="form-control w-50"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="patientothers" class="mb-3 fs-5 text-secondary">مشكلات صحية أخري أو أى تفاصيل أخري</label>
+            <textarea type="text" id="patientothers" class="form-control w-50"></textarea>
+        </div>
+        <div class="mb-4">
+            <label for="anyimages" class="mb-3 fs-5 text-secondary">برجاء رفع أي صور توضيحية (أشعة - تحاليل - وصفات طبية - إلخ...)</label>
+            <input type="file" multiple id="anyimages" class="form-control w-50">
+        </div>
+        <div class="mb-4">
+            <label for="patientrelatives" class="mb-3 fs-5 text-secondary">بيانات أحد الأقارب ورقم هاتفه وصلة قرابته</label>
+            <textarea type="text" id="patientrelatives" class="form-control w-50"></textarea>
+        </div>
+
+        <a href="patienthisdata.html"><button class="btn btn-outline-dark" id="btnaddupdate" onclick="addpatientdata()">إدخال البيانات</button></a>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/Bootstrap/jquery.min.js"></script>
+    <script src="/Bootstrap/popper.min.js"></script>
+    <script src="/Bootstrap/bootstrap.min.js"></script>
+
+    <script src="/Script/patienthisform.js"></script>
+
+</body>
+</html>
