@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="187px" height="188px" viewBox="0 0 187 188" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <style>
+		#a, #b {
+			transform-box: fill-box;
+			transform-origin: center center;
+			-webkit-animation-name: spin;
+			-webkit-animation-duration: 8000ms;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+
+			-moz-animation-name: spin;
+			-moz-animation-duration: 8000ms;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-timing-function: linear;
+
+			-ms-animation-name: spin;
+			-ms-animation-duration: 8000ms;
+			-ms-animation-iteration-count: infinite;
+			-ms-animation-timing-function: linear;
+
+			animation-name: spin;
+			animation-duration: 8000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		#inverse {
+			transform-box: fill-box;
+			transform-origin: center center;
+			-webkit-animation-name: spin;
+			-webkit-animation-duration: 18000ms;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+
+			-moz-animation-name: spin;
+			-moz-animation-duration: 18000ms;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-timing-function: linear;
+
+			-ms-animation-name: spin;
+			-ms-animation-duration: 18000ms;
+			-ms-animation-iteration-count: infinite;
+			-ms-animation-timing-function: linear;
+
+            animation-name: spin;
+            animation-direction: reverse;
+			animation-duration: 18000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+        }
+        
+        #twentyfour{
+            transform-box: fill-box;
+			transform-origin: center center;
+            transform: translateY(50px);
+            animation-name: show;
+			animation-duration: 5000ms;
+			animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            opacity: 0;
+        }#seven{
+            transform-box: fill-box;
+			transform-origin: center center;
+            transform: translateY(50px);
+            animation-name: showa;
+			animation-duration: 5000ms;
+			animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-delay: .4s;
+            opacity: 0;
+        }#sep{
+            transform-box: fill-box;
+			transform-origin: center center;
+            transform: translateY(50px);
+            animation-name: showb;
+			animation-duration: 5000ms;
+			animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-delay: .2s;
+            opacity: 0;
+        }
+        @keyframes showb {
+			0% {
+                transform: translateY(50px);
+                opacity: 0;
+			}10% {
+                opacity: 0.5;
+                transform: translate(0);
+			}
+			50% {
+                transform: translate(0);
+                opacity: 1;
+			}60% {
+                transform: translate(0);
+				opacity: 1;
+			}70% {
+                transform: translate(0);
+				opacity: 1;
+            }95% {
+                transform: translate(0);
+				opacity: 0;
+			}
+		}@keyframes showa {
+			0% {
+                transform: translateY(50px);
+                opacity: 0;
+			}10% {
+                opacity: 0.5;
+                transform: translate(0);
+			}
+			50% {
+                transform: translate(0);
+                opacity: 1;
+			}60% {
+                transform: translate(0);
+				opacity: 0;
+			}70% {
+                transform: translate(0);
+				opacity: 1;
+            }95% {
+                transform: translate(0);
+				opacity: 0;
+			}
+		}@keyframes show {
+			0% {
+                transform: translateY(50px);
+                opacity: 0;
+			}10% {
+                opacity: 0.5;
+                transform: translate(0);
+			}
+			50% {
+                transform: translate(0);
+                opacity: 1;
+			}60% {
+                transform: translate(0);
+				opacity: 0;
+			}70% {
+                transform: translate(0);
+				opacity: 1;
+			}80% {
+                transform: translate(0);
+				opacity: 0;
+			}90% {
+                transform: translate(0);
+				opacity: 1;
+			}95% {
+                transform: translate(0);
+				opacity: 0;
+			}
+		}
+		@-ms-keyframes spin {
+			from {
+				-ms-transform: rotate(0deg);
+			}
+			to {
+				-ms-transform: rotate(360deg);
+			}
+		}
+		@-moz-keyframes spin {
+			from {
+				-moz-transform: rotate(0deg);
+			}
+			to {
+				-moz-transform: rotate(360deg);
+			}
+		}
+		@-webkit-keyframes spin {
+			from {
+				-webkit-transform: rotate(0deg);
+			}
+			to {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+		@keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="b">
+        <g transform="translate(93.000000, 94.500000) rotate(7.000000) translate(-93.000000, -94.500000) translate(2.000000, 6.000000)">
+            <g id="Group">
+                <rect id="Rectangle" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="182" height="177"></rect>
+                <polygon id="Path-2" stroke="#000000" fill="#ffffff" points="57.6854336 12.1652483 72.1361245 46.041441 95.2872922 15.6390119"></polygon>
+            </g>
+        </g>
+        </g>
+        <g id="a" >
+        <g transform="translate(26.000000, 27.000000)">
+            <path d="M67.5,0 C30.2207794,0 0,30.2207794 0,67.5 C0,104.779221 30.2207794,135 67.5,135 L67.5,135 C104.779221,135 135,104.779221 135,67.5" id="Path" stroke="#ffffff" stroke-width="10"></path>
+            <circle id="inverse-copy-2" cx="67.5" cy="67.5" r="67.5"></circle>
+        </g>
+        </g>
+        <path d="M93.5,162 C130.779221,162 161,131.779221 161,94.5 C161,57.2207794 130.779221,27 93.5,27 C56.2207794,27 26,57.2207794 26,94.5 C26,131.779221 56.2207794,162 93.5,162 Z" id="inverse" stroke="#ffffff" stroke-width="10" stroke-dasharray="5,11"></path>
+        <path d="M51,116 L51,109.983287 L62.5,88.235376 C63.0833363,87.1490196 63.4166662,86.198472 63.5,85.3837047 C63.5833338,84.5689374 63.625,83.5557164 63.625,82.3440111 C63.625,81.8008329 63.6145834,81.2263261 63.59375,80.6204735 C63.5729166,80.0146209 63.4583344,79.4818964 63.25,79.0222841 C63.0416656,78.5626718 62.7291688,78.1761854 62.3125,77.8628134 C61.8958312,77.5494413 61.2916706,77.3927577 60.5,77.3927577 C59.5416619,77.3927577 58.7812528,77.6643427 58.21875,78.2075209 C57.6562472,78.7506991 57.375,79.544563 57.375,80.5891365 L57.375,84.224234 L51,84.224234 L51,80.7144847 C51,79.3774306 51.2499975,78.1239613 51.75,76.954039 C52.25,75.7841167 52.9374956,74.7604457 53.8125,73.8830084 C54.6458375,73.0055666 55.6458275,72.3057129 56.8125,71.7834262 C57.9791725,71.2611394 59.22916,71 60.5625,71 C62.229175,71 63.6562441,71.3029218 64.84375,71.9087744 C66.0312559,72.514627 67.0208294,73.3398276 67.8125,74.3844011 C68.5625037,75.4289746 69.1145816,76.6197705 69.46875,77.9568245 C69.8229184,79.2938786 70,80.7144772 70,82.218663 C70,83.3050194 69.9791669,84.2137846 69.9375,84.9449861 C69.8958331,85.6761875 69.8125006,86.3760412 69.6875,87.0445682 C69.5624994,87.7130953 69.3541681,88.3816123 69.0625,89.0501393 C68.7708319,89.7186663 68.3750025,90.5334214 67.875,91.494429 L58.5,109.607242 L70,109.607242 L70,116 L51,116 Z M85.1892655,116 L85.1892655,109.300562 L72,109.300562 L72,103.233146 L81.5508475,71 L88.5677966,71 L78.6271186,103.233146 L85.1892655,103.233146 L85.1892655,90.4030899 L91.8163842,90.4030899 L91.8163842,103.233146 L95,103.233146 L95,109.300562 L91.8163842,109.300562 L91.8163842,116 L85.1892655,116 Z" id="twentyfour" fill="#ffffff" fill-rule="nonzero"></path>
+        <polygon id="seven" fill="#ffffff" fill-rule="nonzero" points="120.4375 116 131.625 77.0674157 124.625 77.0674157 124.625 82.25 119 82.25 119 71 138 71 138 77.4466292 127.1875 116"></polygon>
+        <path d="M114.5,63.5 L96.5,122.5" id="sep" stroke="#ffffff" stroke-width="5" opacity="0.473632812" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+</svg>
