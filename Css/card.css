@@ -1,0 +1,206 @@
+.card {
+    height: 100%;
+    /* اجعل الكارد يمتد ليغطي كل المساحة المتاحة */
+    display: flex;
+    flex-direction: column;
+    /* يجعل المحتوى داخل الكارد عموديًا */
+}
+
+.card-img-top {
+    height: 500px;
+    /* حدد ارتفاعًا موحدًا لجميع الصور */
+    object-fit: cover;
+    /* يجعل الصورة تغطي المساحة بدون تشويه */
+    width: 100%;
+    /* اجعل عرض الصورة يغطي الكارد بالكامل */
+}
+.navbar {
+    width: 100%;
+    z-index: 99999;
+    background-color: #0c3547;
+    padding: 10px 0;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #d78512;
+}
+.card-body {
+    flex-grow: 1;
+    /* يجعل محتوى الكارد يتمدد لملء الفراغ */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* يوزع المحتوى بالتساوي */
+}
+
+.doctor {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #0c3547;
+    line-height: 1.6;
+}
+
+.navbar {
+    width: 100%;
+    z-index: 99999;
+    background-color: #0c3547;
+    padding: 10px 0;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #d78512;
+}
+footer {
+    background-color: #0c3547;
+    color: white;
+    padding: 40px 20px;
+    text-align: right;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+footer p,
+footer a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .quick-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .quick-links li {
+    margin: 5px 0;
+}
+
+footer .quick-links a {
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .quick-links a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+.map-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    footer h3 {
+        text-align: center;
+    }
+
+    footer .quick-links {
+        text-align: center;
+    }
+}
+.book-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background-color: #0056b3;
+}
+
+.selected {
+    background-color: #28a745;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: #f8f9fa;
+    /* لون احتياطي إذا لم تظهر الصورة */
+}
+
+.star {
+    cursor: pointer;
+    color: gray;
+}
+
+.star:hover,
+.star.selected {
+    color: gold
+}
+
+.card body {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}

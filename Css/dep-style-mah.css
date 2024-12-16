@@ -1,0 +1,115 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: Arial, sans-serif;
+     background-color: rgb(236, 236, 247);
+ }
+
+
+ .title {
+
+     text-align: center;
+
+     color: rgb(10, 8, 8);
+     font-size: 23px;
+     margin-top: 30px;
+     width: 80%;
+     margin: 30px auto;
+ }
+
+ .title h4 {
+     direction: ltr;
+     font-size: 16px;
+ }
+
+
+ .containe {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     padding-bottom: px;
+     margin-bottom: 30px;
+
+ }
+
+
+ .card {
+     width: 30%;
+     height: 1px;
+     margin: 20px;
+     border-radius: 8px;
+     overflow: hidden;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     background-color: rgb(252, 254, 255);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px;
+ }
+
+
+ .card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 8px 16px rgba(17, 5, 126, 0.8);
+ }
+
+
+ .card a {
+     text-decoration: none;
+     color: inherit;
+     text-align: center;
+ }
+
+
+ .card img {
+     background-color: white;
+     object-fit: cover;
+
+     margin-bottom: 15px;
+     transition: transform 0.3s ease;
+
+ }
+
+
+ .card img:hover {
+     transform: scale(1.1);
+ }
+
+
+ .card h3 {
+     margin-top: 30px;
+     font-size: 20px;
+     color: white;
+     background-color: #007dc8;
+     padding: 10px 10px;
+     font-weight: normal;
+     width: 100%;
+     text-align: center;
+     transition: transform 0.3s ease, color 0.3s ease;
+ }
+
+ .card:hover h3 {
+     transform: scale(1.1);
+     color: rgb(21, 8, 136);
+ }
+
+
+ @media screen and (max-width: 768px) {
+     .card {
+         width: 45%;
+     }
+ }
+
+ @media screen and (max-width: 480px) {
+     .card {
+         width: 100%;
+     }
+ }

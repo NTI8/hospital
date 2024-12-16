@@ -1,0 +1,284 @@
+ /* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #edf0f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin:  4px;
+    align-items: center;
+    height:  100vh;
+  
+}
+.title
+{
+    text-align: center;
+    margin-top: 30px;
+} */
+
+
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #0c3547;
+    line-height: 1.6;
+}
+
+.navbar {
+    width: 100%;
+    z-index: 99999;
+    background-color: #0c3547;
+    padding: 10px 0;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #d78512;
+}
+
+ .form-container, .info-container {
+    width: 48%;
+}
+
+h2, h3, h4 {
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #38649e;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.info-container {
+    
+    padding: 20px;
+    border-radius: 8px;
+ 
+
+
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item strong {
+    color: #568597;
+}
+
+.map iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    
+}
+
+
+
+
+
+
+
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: auto;
+    margin: auto;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+#responseMessage {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: green;
+}
+@media (max-width: 995px) 
+{
+    main {
+        flex-direction: column;
+    }
+    .info-container
+    {
+        margin: auto;
+        text-align: center;
+    }
+}
+footer {
+    background-color: #0c3547;
+    color: white;
+    padding: 40px 20px;
+    text-align: right;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+footer p,
+footer a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .quick-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .quick-links li {
+    margin: 5px 0;
+}
+
+footer .quick-links a {
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer .quick-links a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+.map-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    footer h3 {
+        text-align: center;
+    }
+
+    footer .quick-links {
+        text-align: center;
+    }
+}
